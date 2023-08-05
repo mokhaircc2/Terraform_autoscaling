@@ -1,6 +1,6 @@
 **Terraform Autoscaling**
 
-This project is about autoscaling an Apache Webserver using Terraform. This involved configuring a Launch Template, UserData scripts, ALB and CloudWatch Alarms to ensure scale out/in activities based on CPU metrics. In this project I created a VPC with public/private subnets, an ALB in the public subnet, Auto-Scaling Group in the private subnet and CloudWatch Alarms and policies based on desired metrics. At the end of the project please destroy the infrastructure using terraform destroy, so not to accumulate any costs.
+This project is about autoscaling an Apache Webserver using Terraform. This involved an Auto-Scaling Group using a Launch Template, UserData scripts, ALB and CloudWatch Alarms to ensure scale in/out activities based on CPU metrics to automatically modify the number of instances running. Firstly I created a VPC with public/private subnets, an ALB in the public subnet to manage traffic from users, Auto-Scaling Group in the private subnet and CloudWatch Alarms and policies based on desired metrics. At the end of the project please destroy the infrastructure using terraform destroy, so not to accumulate any costs.
 
 
 1. Install Terraform from Hashicorp website
