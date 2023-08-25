@@ -5,7 +5,7 @@ This project is about autoscaling an Apache Webserver using Terraform. This invo
 
 1. Install Terraform from Hashicorp website
 
-2.  a Terraform user on AWS account. Go to IAM, user, and add user, give a name. Next select access key for programatic access. Next, attach existing policy directly and select AdministratorAccess and create user. You will be given an Access key ID and Secret Access key.
+2.  Create Terraform user on AWS account. Go to IAM, user, and add user, give a name. Next select access key for programatic access. Next, attach existing policy directly and select AdministratorAccess and create user. You will be given an Access key ID and Secret Access key.
 
 3. Use an IDE like Visual Studio Code
 
