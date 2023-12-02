@@ -14,6 +14,6 @@ variable "project" {
 # launch template ami
 variable "ami" {
   type    = string
-  default = "ami-06935448000742e6b"
+  default = "ami-07355fe79b493752d"
 
 }
