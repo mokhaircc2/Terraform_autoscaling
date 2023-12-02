@@ -107,7 +107,7 @@ resource "aws_subnet" "private_subnet_3" {
 
 # create Elastic IP for NAT
 resource "aws_eip" "nat" {
-  vpc = true
+  domain = "vpc"
 
   tags = {
     Name = "${var.project}-nat-eip"
@@ -125,8 +125,6 @@ resource "aws_nat_gateway" "main" {
   tags = {
     Name = "${var.project}-nat-gateway"
   }
-
-
 
   # To ensure proper ordering, it is recommended to add an explicit dependency
   # on the Internet Gateway for the VPC.
