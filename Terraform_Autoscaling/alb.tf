@@ -28,7 +28,7 @@ resource "aws_security_group" "alb-sg" {
 # Create alb
 
 resource "aws_alb" "alb" {
-  name            = "apache_alb"
+  name            = "apache-alb"
   security_groups = [aws_security_group.alb-sg.id]
   subnets         = [aws_subnet.public_subnet_1.id, aws_subnet.public_subnet_2.id, aws_subnet.public_subnet_3.id]
 }
