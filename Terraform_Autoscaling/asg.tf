@@ -3,7 +3,7 @@ resource "aws_autoscaling_group" "asg" {
   vpc_zone_identifier  = [aws_subnet.private_subnet_1.id, aws_subnet.private_subnet_2.id, aws_subnet.private_subnet_3.id]
   name                 = "apache-asg"
   max_size             = 3
-  min_size             = 1
+  min_size             = 2
   health_check_type    = "ELB"
   termination_policies = ["OldestInstance"]
   launch_template {
@@ -27,7 +27,7 @@ resource "aws_autoscaling_policy" "apache_policy_up" {
 resource "aws_cloudwatch_metric_alarm" "apache_cpu_alarm_up" {
   alarm_name          = "apache_cpu_alarm_up"
   threshold           = "60"
-  comparison_operator = "GreaterThanOrEqualToTreshold"
+  comparison_operator = "GreaterThanOrEqualToThreshold"
   evaluation_periods  = "2"
   period              = "120"
   metric_name         = "CPUUtilization"
@@ -54,7 +54,7 @@ resource "aws_autoscaling_policy" "apache_policy_in" {
 resource "aws_cloudwatch_metric_alarm" "apache_cpu_alarm_down" {
   alarm_name          = "apache_cpu_alarm_down"
   threshold           = "10"
-  comparison_operator = "LessThanOrEqualToTreshold"
+  comparison_operator = "LessThanOrEqualToThreshold"
   evaluation_periods  = "2"
   period              = "120"
   metric_name         = "CPUUtilization"
