@@ -115,7 +115,7 @@ resource "aws_eip" "nat" {
   depends_on = [aws_internet_gateway.gw]
 }
 
-# public Nat Gateway
+# Create Nat Gateway in a public subnet
 # elastic IP is sometime known as allocation IP
 
 resource "aws_nat_gateway" "main" {
