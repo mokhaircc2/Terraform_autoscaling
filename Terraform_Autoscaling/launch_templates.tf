@@ -1,4 +1,4 @@
-# Creat EC2 sg
+# Create EC2 sg
 resource "aws_security_group" "EC2" {
   name        = "apache-ec2-sg"
   description = "apache-ec2-sg"
